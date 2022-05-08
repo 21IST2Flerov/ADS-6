@@ -13,8 +13,7 @@ public:
     void push(T z1) {
         if (poslednee - pervoe >= size) {
             throw "Full!";
-        }
-        else {
+        } else {
             int z2 = poslednee - 1;
             while ((z2 >= pervoe) && (arr[z2 % size].prior < z1.prior)) {
                 arr[(z2 + 1) % size] = arr[z2 % size];
